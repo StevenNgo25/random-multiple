@@ -147,3 +147,36 @@ input[type="text"] {
 .todo-list:empty+.empty-state {
   display: flex;
 }
+
+/* Ẩn popup mặc định */
+.popup {
+  display: none;
+  position: fixed; 
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #f1f1f1;
+  z-index: 9; 
+  background-color: white;
+}
+
+/* Thiết kế popup */
+.popup-content {
+  padding: 20px;
+  margin: 15px;
+}
+
+/* Nút đóng */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
