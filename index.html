@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wheel of Names</title>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <script type="text/javascript" src="js/Winwheel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  </head>
+  <!--v1.0.7-->
+
+  <body>
+    <div class="container">
+      <!-- <div class="arrow-container">
+        <img src="./resources/arrow.png" />
+      </div> -->
+      <div class="wheel-container">
+        <td width="438" height="582" class="the_wheel">
+          <button onClick="startSpin();" type="button" class="canvas-button">
+            <canvas id="canvas" width="800" height="800"></canvas>
+          </button>
+        </td>
+      </div>
+    </div>
+
+    <div class="names-container">
+      <button type="button" class="collapsible-button">+</button>
+      <div class="content">
+        <form class="js-form">
+          <input
+            autofocus
+            type="text"
+            aria-label="Nhập tên"
+            placeholder="Nhập tên hoặc số (1-100)"
+            class="js-name-input"
+          />
+        </form>
+        <input
+          type="text"
+          aria-label="Số lượng kết quả"
+          placeholder="Nhập số lượng kết quả"
+          class="js-result-input"
+        />
+        <button
+          style="margin-top: 1rem; padding: 1 rem"
+          type="button"
+          class="js-delete-all"
+        >
+          Xóa hết
+        </button>
+        <ul class="todo-list js-name-list"></ul>
+        <div class="empty-state"></div>
+      </div>
+    </div>
+
+    <div id="myModal" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <p>Chúc mừng bạn đã trúng thưởng!</p>
+          <p class="result-text" style="user-select: all; font-weight: bold;"></p>
+          <button style="padding: 1 rem" class="js-delete-result">Xóa các kết quả</button>
+        </div>
+      </div>
+
+      <div class="c-histories" style="position: fixed; right: 10px; top: 10px; border-radius:5px; width: 40vh">
+        <textarea rows="40" readonly class="result-history" style="width: 100%;"></textarea>
+      </div>
+
+    <script type="text/javascript" src="js/WheelScript.js"></script>
+  </body>
+</html>
