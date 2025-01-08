@@ -55,17 +55,109 @@
     </div>
 
     <div id="myModal" class="popup">
-        <div class="popup-content">
-          <span class="close">&times;</span>
-          <p>Chúc mừng bạn đã trúng thưởng!</p>
-          <p class="result-text" style="user-select: all; font-weight: bold;"></p>
-          <button style="padding: 1 rem" class="js-delete-result">Xóa các kết quả</button>
-        </div>
+      <div class="popup-content">
+        <!-- <span class="close">&times;</span> -->
+        <h1
+          style="
+            text-transform: uppercase;
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+          "
+        >
+          Quay số giải
+          <span
+            style="
+              text-transform: uppercase;
+              font-size: 2rem;
+              color: inherit;
+              font-family: inherit;
+            "
+            class="label-giai"
+            ></span
+          >
+        </h1>
+        <p
+          class="result-text"
+          style="
+            user-select: all;
+            font-weight: bold;
+            font-size: xx-large;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 65vw;
+          "
+        >
+        </p>
+        <button
+          style="
+            padding: 0.6rem 1rem;
+            border-radius: 3px;
+            position: absolute;
+            bottom: 1rem;
+            left: 2rem;
+            font-size: large;
+            background-color: rgb(243, 253, 110);
+            color: green;
+            border: none;
+          "
+          class="js-delete-result"
+        >
+          Xóa các kết quả, quay tiếp
+        </button>
+        <button
+          style="
+            padding: 0.6rem 1rem;
+            border-radius: 3px;
+            position: absolute;
+            bottom: 1rem;
+            right: 10rem;
+            font-size: large;
+            background-color: rgb(242, 96, 96);
+            color: rgb(0, 0, 0);
+            border: none;
+          "
+          class="close"
+        >
+          Đóng
+        </button>
+        <button
+          style="
+            padding: 0.6rem 1rem;
+            border-radius: 3px;
+            position: absolute;
+            bottom: 1rem;
+            right: 2rem;
+            font-size: large;
+            background-color: rgb(209, 255, 209);
+            color: rgb(0, 70, 0);
+            border: none;
+          "
+          class="js-reroll"
+        >
+          Quay tiếp
+        </button>
       </div>
+    </div>
 
-      <div class="c-histories" style="position: fixed; right: 10px; top: 10px; border-radius:5px; width: 40vh">
-        <textarea rows="40" readonly class="result-history" style="width: 100%;"></textarea>
-      </div>
+    <div
+      class="c-histories"
+      style="
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        border-radius: 5px;
+        width: 40vh;
+      "
+    >
+      <textarea
+        rows="40"
+        readonly
+        class="result-history"
+        style="width: 100%;font-size: 1.2rem;"
+      ></textarea>
+    </div>
 
     <script type="text/javascript" src="js/WheelScript.js"></script>
   </body>
