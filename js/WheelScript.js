@@ -421,6 +421,14 @@ btnReroll.addEventListener("click", (event) => {
   startSpin();
 });
 
+const btnReroll1 = document.querySelector(".js-reroll-1");
+btnReroll1.addEventListener("click", (event) => {
+  event.preventDefault();
+  countGiai--;
+  modal.style.display = "none";
+  startSpin();
+});
+
 const btnDeleteAll = document.querySelector(".js-delete-all");
 btnDeleteAll.addEventListener("click", (event) => {
   this.deleteAll();
