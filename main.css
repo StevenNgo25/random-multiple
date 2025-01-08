@@ -150,7 +150,7 @@ input[type="text"] {
 
 /* Ẩn popup mặc định */
 .popup {
-  background-image: url("/resources/LED_02.jpg");
+  background-image: url("./resources/LED_02.jpg");
   display: none;
   position: fixed; 
   left: 50%;
