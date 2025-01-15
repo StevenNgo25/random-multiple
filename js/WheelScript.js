@@ -68,7 +68,7 @@ for(let num = 1; num <= 10; num++){
 }
 data.push({
     fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
-    text: "...",
+    text: "2000",
     id: null,
 })
 
@@ -149,35 +149,27 @@ resultsHistoryElement.value = "CÁC KẾT QUẢ:\n";
 
 const dsGiai = [
     {
-      label: "Giải khuyến khích (Bát)",
-      value: 100
+      label: "Giải khuyến khích",
+      value: 44
     },
     {
-      label: "Giải khuyến khích (Ấm chén)",
-      value: 50
+      label: "Giải khuyến khích",
+      value: 44
     },
     {
-      label: "Giải khuyến khích (Ấm siêu tốc)",
-      value: 50
+      label: "Giải khuyến khích",
+      value: 48
     },
     {
-      label: "Giải khuyến khích (Chảo chống dính)",
-      value: 30
-    },
-    {
-      label: "Giải 3 (Bộ nồi)",
-      value: 10
-    },
-    {
-      label: "Giải 3 (Bếp từ)",
+      label: "Giải 3",
       value: 20
     },
     {
-      label: "Giải 3 (Chăn)",
-      value: 50
+      label: "Giải 3",
+      value: 40
     },
     {
-      label: "Giải nhì (Nồi chiên không dầu)",
+      label: "Giải nhì",
       value: 2
     },
     {
@@ -212,7 +204,7 @@ function alertPrize(indicatedSegment) {
     results.map((item) => item.text).join(", ") + "\n\n";
   //alert("The winner is: " + results.join(', '));
   labelGiai.innerHTML = dsGiai[countGiai].label;
-  showPopup("Các số trúng giải là: "+results.map((item) => item.text).join(" || "));
+  showPopup(""+results.map((item) => item.text).join("  "));
   countGiai++;
   if(countGiai >= dsGiai.length) countGiai = 0;
   resetWheel();
@@ -332,7 +324,7 @@ function renderWheel() {
     nameList.length > 10 ? getRandomResults(nameList, 10) : nameList;
   if (nameList.length > 10)
     showNameList.push({
-      text: "...",
+      text: "2000",
       fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
       id: null,
     });

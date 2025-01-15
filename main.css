@@ -4,7 +4,8 @@ body {
   padding: 0;
   margin: 0;
   border: 0;
-  background-color: black;
+  background-image: url("./resources/LED.jpg");
+  background-size: cover;
 }
 
 input:focus,
@@ -150,7 +151,8 @@ input[type="text"] {
 
 /* Ẩn popup mặc định */
 .popup {
-  background-image: url("./resources/LED_02.jpg");
+  background-image: url("./resources/LED.jpg");
+  background-size: cover;
   display: none;
   position: fixed; 
   left: 50%;
