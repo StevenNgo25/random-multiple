@@ -150,32 +150,19 @@ resultsHistoryElement.value = "CÁC KẾT QUẢ:\n";
 const dsGiai = [
     {
       label: "Giải khuyến khích",
-      value: 24
-    },
-    {
-      label: "Giải khuyến khích",
-      value: 20
+      value: 44
     },
 
     {
       label: "Giải khuyến khích",
-      value: 24
-    },
-    {
-      label: "Giải khuyến khích",
-      value: 20
+      value: 44
     },
 
     {
       label: "Giải khuyến khích",
-      value: 28
+      value: 48
     },
-    {
-      label: "Giải khuyến khích",
-      value: 20
-    },
-
-
+    
     {
       label: "Giải 3",
       value: 20
@@ -183,11 +170,7 @@ const dsGiai = [
 
     {
       label: "Giải 3",
-      value: 20
-    },
-    {
-      label: "Giải 3",
-      value: 20
+      value: 40
     },
 
     {
