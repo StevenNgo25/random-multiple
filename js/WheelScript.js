@@ -180,10 +180,16 @@ const dsGiai = [
       label: "Giải 3",
       value: 20
     },
+
     {
       label: "Giải 3",
-      value: 40
+      value: 20
     },
+    {
+      label: "Giải 3",
+      value: 20
+    },
+
     {
       label: "Giải nhì",
       value: 2
@@ -220,7 +226,7 @@ function alertPrize(indicatedSegment) {
     results.map((item) => item.text).join(", ") + "\n\n";
   //alert("The winner is: " + results.join(', '));
   labelGiai.innerHTML = dsGiai[countGiai].label;
-  showPopup(""+results.map((item) => item.text).join("    "));
+  showPopup('<span class="kq-item">'+results.map((item) => item.text).join('</span><span class="kq-item">')+'</span>');
   countGiai++;
   if(countGiai >= dsGiai.length) countGiai = 0;
   resetWheel();
