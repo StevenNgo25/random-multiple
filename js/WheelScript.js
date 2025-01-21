@@ -220,7 +220,7 @@ function alertPrize(indicatedSegment) {
     results.map((item) => item.text).join(", ") + "\n\n";
   //alert("The winner is: " + results.join(', '));
   labelGiai.innerHTML = dsGiai[countGiai].label;
-  showPopup(""+results.map((item) => item.text).join("  "));
+  showPopup(""+results.map((item) => item.text).join("    "));
   countGiai++;
   if(countGiai >= dsGiai.length) countGiai = 0;
   resetWheel();
