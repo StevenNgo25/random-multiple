@@ -68,7 +68,7 @@ for(let num = 1; num <= 10; num++){
 }
 data.push({
     fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
-    text: "2000",
+    text: "650",
     id: null,
 })
 
@@ -89,7 +89,7 @@ let theWheel = new Winwheel({
 });
 
 data = []
-for(let num = 1; num <= 2000; num++){
+for(let num = 1; num <= 650; num++){
     data.push({
         fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
         text: num.toString(),
@@ -148,42 +148,42 @@ const resultsHistoryElement = document.querySelector(".result-history");
 resultsHistoryElement.value = "CÁC KẾT QUẢ:\n";
 
 const dsGiai = [
-    {
+    /* {
       label: "Giải khuyến khích",
-      value: 44
-    },
-
-    {
-      label: "Giải khuyến khích",
-      value: 44
-    },
-
-    {
-      label: "Giải khuyến khích",
-      value: 48
-    },
-    
-    {
-      label: "Giải 3",
-      value: 20
-    },
-
-    {
-      label: "Giải 3",
       value: 40
     },
 
     {
+      label: "Giải khuyến khích",
+      value: 44
+    }, */
+
+    {
+      label: "Giải khuyến khích",
+      value: 40
+    },
+    
+    {
+      label: "Giải ba",
+      value: 27
+    },
+
+    /* {
+      label: "Giải 3",
+      value: 40
+    }, */
+
+    {
       label: "Giải nhì",
-      value: 2
+      value: 11
     },
     {
       label: "Giải nhất",
-      value: 1
+      value: 7
     },
     {
       label: "Giải đặc biệt",
-      value: 1
+      value: 3
     }
   ];
 let countGiai = 0;
@@ -329,7 +329,7 @@ function renderWheel() {
     nameList.length > 10 ? getRandomResults(nameList, 10) : nameList;
   if (nameList.length > 10)
     showNameList.push({
-      text: "2000",
+      text: "650",
       fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
       id: null,
     });

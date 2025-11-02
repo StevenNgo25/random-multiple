@@ -92,7 +92,11 @@
             margin-top: 6vh;
             font-size: 3vw;
             line-height: 7vh;
-            word-wrap: break-word;
+            word-break: normal;      /* Không cắt chữ giữa chừng */
+            white-space: normal;     /* Cho phép xuống dòng */
+            display: flex;           /* Sử dụng flex để các item tự động xuống dòng */
+            flex-wrap: wrap;         /* Cho phép xuống dòng khi hết chỗ */
+            gap: 4px;
           "
         >
         </p>
