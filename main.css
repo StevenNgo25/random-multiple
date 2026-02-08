@@ -4,7 +4,7 @@ body {
   padding: 0;
   margin: 0;
   border: 0;
-  background-image: url("./resources/bg.jpg");
+  background-image: url("./resources/bg.png");
   background-size: cover;
 }
 
@@ -17,8 +17,8 @@ button:focus {
 
 
 .container {
-  width: 50%;
-  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
   /* Flex rules */
   display: flex;
   flex-flow: column nowrap;
@@ -34,10 +34,31 @@ button:focus {
   top: 0px;
 }
 
+.current-prize-container {
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0.8);
+  padding: 10px 30px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+#current-prize-display {
+  color: #fff100;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
 .wheel-container {
   text-align: center;
-  width: 100%;
-  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .names-container {
@@ -50,6 +71,17 @@ button:focus {
   background-repeat: no-repeat;
   border: none;
   overflow: hidden;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvas {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
 }
 
 /* Style the button that is used to open and close the collapsible content */
@@ -151,15 +183,15 @@ input[type="text"] {
 
 /* Ẩn popup mặc định */
 .popup {
-  background-image: url("./resources/bg.jpg");
+  background-image: url("./resources/bg.png");
   background-size: cover;
   display: none;
-  position: fixed; 
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   border: 3px solid #f1f1f1;
-  z-index: 9; 
+  z-index: 9;
   /* background-color: white; */
   width: 100%;
   height: 100%;
@@ -195,9 +227,9 @@ button:hover {
   scale: 1.1;
 }
 
-.kq-item{
+.kq-item {
   margin-left: 3rem;
   color: black;
   font-size: inherit;
-  font-family:inherit;
+  font-family: inherit;
 }

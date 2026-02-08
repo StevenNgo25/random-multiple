@@ -1,100 +1,11 @@
-const WHEEL_RADIUS = 400;
-const TEXT_FONT_SIZE = 50;
-let data = [
-  {
+let theWheel;
+let data = [];
+for (let num = 1; num <= 2000; num++) {
+  data.push({
     fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
-    text: "Akhil",
+    text: num.toString(),
     id: generateGUID(),
-  },
-  {
-    fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
-    text: "Andy Y.",
-    id: generateGUID(),
-  },
-  {
-    fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
-    text: "Andy B.",
-    id: generateGUID(),
-  },
-  {
-    fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
-    text: "David",
-    id: generateGUID(),
-  },
-  {
-    fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
-    text: "Davy",
-    id: generateGUID(),
-  },
-  {
-    fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
-    text: "Jonathan",
-    id: generateGUID(),
-  },
-  {
-    fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
-    text: "Leo",
-    id: generateGUID(),
-  },
-  {
-    fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
-    text: "Marcos",
-    id: generateGUID(),
-  },
-  {
-    fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
-    text: "Nick",
-    id: generateGUID(),
-  },
-  {
-    fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
-    text: "Tyler",
-    id: generateGUID(),
-  },
-  {
-    fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
-    text: "Ver",
-    id: generateGUID(),
-  },
-];
-
-data = []
-for(let num = 1; num <= 10; num++){
-    data.push({
-        fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
-        text: num.toString(),
-        id: generateGUID(),
-    })
-}
-data.push({
-    fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
-    text: "650",
-    id: null,
-})
-
-// Create new wheel object specifying the parameters at creation time.
-let theWheel = new Winwheel({
-  numSegments: 11, // Specify number of segments.
-  outerRadius: WHEEL_RADIUS, // Set outer radius so wheel fits inside the background.
-  textFontSize: TEXT_FONT_SIZE, // Set font size as desired.
-  // Define segments including colour and text.
-  segments: data,//data.sort(() => Math.random() - 0.5),
-  // Specify the animation to use.
-  animation: {
-    type: "spinToStop",
-    duration: 10,
-    spins: 8,
-    callbackFinished: alertPrize,
-  },
-});
-
-data = []
-for(let num = 1; num <= 650; num++){
-    data.push({
-        fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
-        text: num.toString(),
-        id: generateGUID(),
-    })
+  })
 }
 
 function generateGUID() {
@@ -148,44 +59,43 @@ const resultsHistoryElement = document.querySelector(".result-history");
 resultsHistoryElement.value = "CÁC KẾT QUẢ:\n";
 
 const dsGiai = [
-    /* {
-      label: "Giải khuyến khích",
-      value: 40
-    },
-
-    {
-      label: "Giải khuyến khích",
-      value: 44
-    }, */
-
-    {
-      label: "Giải khuyến khích",
-      value: 40
-    },
-    
-    {
-      label: "Giải ba",
-      value: 27
-    },
-
-    /* {
-      label: "Giải 3",
-      value: 40
-    }, */
-
-    {
-      label: "Giải nhì",
-      value: 11
-    },
-    {
-      label: "Giải nhất",
-      value: 7
-    },
-    {
-      label: "Giải đặc biệt",
-      value: 3
-    }
-  ];
+  {
+    label: "Giải khuyến khích (Máy sấy tóc)",
+    value: 44
+  },
+  {
+    label: "Giải khuyến khích (Cốc chén)",
+    value: 44
+  },
+  {
+    label: "Giải khuyến khích (Ấm siêu tốc)",
+    value: 48
+  },
+  {
+    label: "Giải 3 (Đệm ngải cứu)",
+    value: 30
+  },
+  {
+    label: "Giải 3 (Nồi cơm điện)",
+    value: 30
+  },
+  {
+    label: "Giải nhì (Máy là hơi nước)",
+    value: 1
+  },
+  {
+    label: "Giải nhì (Chảo điện)",
+    value: 1
+  },
+  {
+    label: "Giải nhất (Nồi áp suất điện)",
+    value: 1
+  },
+  {
+    label: "Giải đặc biệt",
+    value: 1
+  }
+];
 let countGiai = 0;
 const labelGiai = document.querySelector(".label-giai");
 // -------------------------------------------------------
@@ -205,13 +115,17 @@ function alertPrize(indicatedSegment) {
   );
   const results = nameList.filter((item) => resultIds.includes(item.id));
   localStorage.setItem("resultText", JSON.stringify(results));
-  resultsHistoryElement.value +=dsGiai[countGiai].label + ": " +
+  resultsHistoryElement.value += dsGiai[countGiai].label + ": " +
     results.map((item) => item.text).join(", ") + "\n\n";
   //alert("The winner is: " + results.join(', '));
   labelGiai.innerHTML = dsGiai[countGiai].label;
-  showPopup('<span class="kq-item">'+results.map((item) => item.text).join('</span><span class="kq-item">')+'</span>');
+  showPopup('<span class="kq-item">' + results.map((item) => item.text).join('</span><span class="kq-item">') + '</span>');
   countGiai++;
-  if(countGiai >= dsGiai.length) countGiai = 0;
+  if (countGiai >= dsGiai.length) countGiai = 0;
+
+  // Update display for NEXT spin
+  //document.getElementById("current-prize-display").innerHTML = dsGiai[countGiai].label;
+
   resetWheel();
 }
 
@@ -329,7 +243,7 @@ function renderWheel() {
     nameList.length > 10 ? getRandomResults(nameList, 10) : nameList;
   if (nameList.length > 10)
     showNameList.push({
-      text: "650",
+      text: "2000",
       fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16),
       id: null,
     });
@@ -422,6 +336,8 @@ const btnReroll1 = document.querySelector(".js-reroll-1");
 btnReroll1.addEventListener("click", (event) => {
   event.preventDefault();
   countGiai--;
+  if (countGiai < 0) countGiai = dsGiai.length - 1;
+  document.getElementById("current-prize-display").innerHTML = dsGiai[countGiai].label;
   modal.style.display = "none";
   startSpin();
 });
@@ -469,7 +385,11 @@ document.addEventListener("DOMContentLoaded", () => {
       renderNames(t);
     });
   }
+  renderWheel();
 });
+
+const WHEEL_RADIUS = 400;
+const TEXT_FONT_SIZE = 50;
 
 // -------------------------------------------------------
 // Event listener for opening and closing the collapsible list.

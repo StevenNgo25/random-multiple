@@ -15,12 +15,15 @@
       <!-- <div class="arrow-container">
         <img src="./resources/arrow.png" />
       </div> -->
+      <!-- <div class="current-prize-container">
+        Đang quay: <span id="current-prize-display">Giải khuyến khích (Máy sấy tóc)</span>
+      </div> -->
       <div class="wheel-container">
-        <td width="438" height="582" class="the_wheel">
-          <button onClick="startSpin();" type="button" class="canvas-button">
-            <canvas id="canvas" width="800" height="800"></canvas>
-          </button>
-        </td>
+      <div class="the_wheel">
+        <button onClick="startSpin();" type="button" class="canvas-button">
+          <canvas id="canvas" width="800" height="800"></canvas>
+        </button>
+      </div>
       </div>
     </div>
 
@@ -32,7 +35,7 @@
             autofocus
             type="text"
             aria-label="Nhập tên"
-            placeholder="Nhập tên hoặc số (1-100)"
+            placeholder="Nhập tên hoặc số (1-2000)"
             class="js-name-input"
           />
         </form>
