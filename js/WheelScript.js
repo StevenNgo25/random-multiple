@@ -60,35 +60,31 @@ resultsHistoryElement.value = "CÁC KẾT QUẢ:\n";
 
 const dsGiai = [
   {
-    label: "Giải khuyến khích (Máy sấy tóc)",
+    label: "Giải khuyến khích",
     value: 44
   },
   {
-    label: "Giải khuyến khích (Cốc chén)",
+    label: "Giải khuyến khích",
     value: 44
   },
   {
-    label: "Giải khuyến khích (Ấm siêu tốc)",
+    label: "Giải khuyến khích",
     value: 48
   },
   {
-    label: "Giải 3 (Đệm ngải cứu)",
+    label: "Giải ba",
     value: 30
   },
   {
-    label: "Giải 3 (Nồi cơm điện)",
+    label: "Giải ba",
     value: 30
   },
   {
-    label: "Giải nhì (Máy là hơi nước)",
-    value: 1
+    label: "Giải nhì",
+    value: 2
   },
   {
-    label: "Giải nhì (Chảo điện)",
-    value: 1
-  },
-  {
-    label: "Giải nhất (Nồi áp suất điện)",
+    label: "Giải nhất",
     value: 1
   },
   {
